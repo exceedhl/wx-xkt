@@ -35,3 +35,7 @@
     <view class="name">张三</view>
   </view>
 </view>
+
+<view class="weui-btn-area">
+  <button class="weui-btn" type="warn" hover-class="button-hover" >删除点名</button>
+</view>

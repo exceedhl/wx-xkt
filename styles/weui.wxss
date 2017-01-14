@@ -116,7 +116,7 @@ icon {
   right: 2px;
 }
 .weui-cell_link {
-  color: #586C94;
+  color: #00bbbd;
   font-size: 14px;
 }
 .weui-cell_link:active {
@@ -177,7 +177,7 @@ icon {
   word-break: break-all;
 }
 .weui-toptips_warn {
-  background-color: #E64340;
+  background-color: #FF654E;
 }
 .weui-textarea {
   display: block;
@@ -188,10 +188,10 @@ icon {
   text-align: right;
 }
 .weui-textarea-counter_warn {
-  color: #E64340;
+  color: #FF654E;
 }
 .weui-cell_warn {
-  color: #E64340;
+  color: #FF654E;
 }
 .weui-form-preview {
   position: relative;
@@ -501,7 +501,7 @@ icon {
 }
 .weui-msg__link {
   display: inline;
-  color: #586C94;
+  color: #00bbbd;
 }
 .weui-msg__icon-area {
   margin-bottom: 30px;
@@ -565,7 +565,7 @@ icon {
 }
 .weui-agree__link {
   display: inline;
-  color: #586C94;
+  color: #00bbbd;
 }
 .weui-agree__checkbox {
   position: absolute;
@@ -606,7 +606,7 @@ icon {
   margin: 0 .62em;
   position: relative;
   font-size: 14px;
-  color: #586C94;
+  color: #00bbbd;
 }
 .weui-footer__link:before {
   content: " ";

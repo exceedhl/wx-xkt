@@ -1,1 +1,17 @@
 @import 'styles/weui.wxss';
+
+button[type="primary"] {
+  background-color: #00bbbd;
+}
+
+button[type="primary"].button-hover {
+  background-color: #279FA0;
+}
+
+button[type="warn"] {
+  background-color: #FF654E;
+}
+
+button[type="warn"].button-hover {
+  background-color: #CD4632;
+}

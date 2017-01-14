@@ -6,6 +6,6 @@
 </view>
 
 <view class="weui-btn-area">
-  <navigator url="call"><button class="weui-btn" type="primary">开始点名</button></navigator>
-  <button class="weui-btn" type="warn">删除点名</button>
+  <navigator url="call"><button class="weui-btn" type="primary" hover-class="button-hover" >开始点名</button></navigator>
+  <button class="weui-btn" type="warn" hover-class="button-hover" >删除点名</button>
 </view>

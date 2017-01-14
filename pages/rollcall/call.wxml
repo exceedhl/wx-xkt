@@ -8,10 +8,10 @@
 <view class="call-status">32名学生已签到</view>
 
 <view class="weui-btn-area">
-    <button class="weui-btn" type="primary" bindtap="showTopTips">开始计时 (20s)</button>
-    <button class="weui-btn" type="default">查看点名详情</button>
+    <button class="weui-btn" type="primary" hover-class="button-hover" bindtap="showTopTips">开始计时 (20s)</button>
+    <button class="weui-btn" type="default" hover-class="button-hover" >查看点名详情</button>
 </view>
 
 <view class="weui-btn-area">
-    <button class="weui-btn" type="warn">结束点名</button>
+    <button class="weui-btn" type="warn" hover-class="button-hover" >结束点名</button>
 </view>
