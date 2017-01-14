@@ -1,0 +1,32 @@
+page {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  background-color: white;
+}
+
+.barcode {
+  flex-grow: 7;
+  padding: 20rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.barcode .description {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 15rpx;
+}
+
+.barcode image {
+  width: 200px;
+  height: 200px;
+  margin-top: 30rpx;
+
+}
+
+.operation {
+  padding: 20rpx;
+  flex-grow: 1;
+}

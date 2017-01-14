@@ -1,0 +1,48 @@
+.code-area {
+  margin-bottom: 100rpx;
+}
+
+.code-area .description {
+  font-size:24rpx;
+  margin-top:110rpx;
+  padding:0 30rpx;
+  color: #666;
+  text-align: center;
+}
+
+.code-area .code {
+  font-size:82rpx;
+  text-align:center;
+  margin-top:32rpx;
+}
+
+.code-area .code image {
+  width:48rpx;
+  height:48rpx;
+  margin:0 0 5rpx 5rpx;
+}
+
+.code-area .code text {
+  margin: 0 10rpx;
+  border: 1px solid #dcdcdc;
+  padding: 5rpx 20rpx;
+}
+
+.seconds {
+  font-size:32rpx;
+  text-align:center;
+  margin-top:48rpx;
+}
+
+.call-status {
+  text-align:center;
+  font-size:32rpx;
+  color: #666;
+}
+
+.weui-btn-area:last-of-type {
+  position: absolute;
+  left: 0rpx;
+  right: 0rpx;
+  bottom: 20rpx;
+}

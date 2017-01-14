@@ -1,0 +1,136 @@
+page {
+  background-color: #efefef;
+}
+
+.rollcalls {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+}
+
+.rollcall-panel {
+  margin-bottom: 5rpx;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.rollcall-panel:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #E5E5E5;
+  color: #E5E5E5;
+}
+
+.rollcall-panel:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1rpx solid #E5E5E5;
+  color: #E5E5E5;
+}
+
+.rollcall-panel-title {
+  margin-top: .77em;
+  margin-bottom: .3em;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #999999;
+  font-size: 14px;
+}
+
+.rollcall-date {
+  width: 120rpx;
+  font-size: 16px;
+  color: #F6A623;
+  padding: 15rpx 0 0 25rpx;
+}
+
+.today .rollcall-date {
+  color: #00bbbd;
+}
+
+.rollcall-list {
+  flex-grow: 1;
+}
+
+.rollcall-item {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  padding: 15rpx;
+}
+.rollcall-item:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #E5E5E5;
+  color: #E5E5E5;
+  left: 0px;
+}
+
+.rollcall-info {
+  flex-grow: 1;
+}
+
+.rollcall-status {
+  font-size: 17px;
+  width: 150rpx;
+}
+
+.rollcall-status .weui-badge {
+  background-color: #F6A623;
+}
+
+.today .rollcall-status .weui-badge {
+  background-color: #00bbbd;
+}
+
+.rollcall-title, .rollcall-add {
+  font-size: 17px;
+}
+
+.rollcall-add {
+  color: #00bbbd;
+}
+
+.rollcall-class {
+  font-size: 13px;
+  color: #999999;
+}
+
+.icon {
+  width: 28rpx;
+  height: 28rpx;
+  background-color: #00bbbd;
+}
+
+#rollcall-add {
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+  background-color: #00bbbd;
+  border-radius: 50rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 70rpx;
+  line-height: 1.3;
+  color: white;
+}

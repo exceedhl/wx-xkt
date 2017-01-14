@@ -1,0 +1,37 @@
+<view class="stat">班上共有40名学生，32人已签到</view>
+<view class="weui-flex">
+  <view class="weui-flex__item student">
+    <image src="{{icon}}"></image>
+    <view class="name">张三</view>
+  </view>
+  <view class="weui-flex__item student">
+    <image src="{{icon}}"></image>
+    <view class="name">张三</view>
+  </view>
+  <view class="weui-flex__item student">
+    <image src="{{icon}}"></image>
+    <view class="name">张三</view>
+  </view>
+  <view class="weui-flex__item student">
+    <image src="{{icon}}"></image>
+    <view class="name">张三</view>
+  </view>
+</view>
+<view class="weui-flex">
+  <view class="weui-flex__item student">
+    <image src="{{icon}}"></image>
+    <view class="name">张三</view>
+  </view>
+  <view class="weui-flex__item student">
+    <image src="{{icon}}"></image>
+    <view class="name">张三</view>
+  </view>
+  <view class="weui-flex__item student">
+    <image src="{{icon}}"></image>
+    <view class="name">张三</view>
+  </view>
+  <view class="weui-flex__item student">
+    <image src="{{icon}}"></image>
+    <view class="name">张三</view>
+  </view>
+</view>

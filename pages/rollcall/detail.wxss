@@ -1,0 +1,20 @@
+.stat {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 24rpx;
+}
+
+.student {
+  text-align: center;
+  margin-top: 32rpx;
+}
+
+.student .name {
+  font-size: 16px;
+}
+
+.student image {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}

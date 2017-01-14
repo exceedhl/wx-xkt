@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/rollcall/index",
+    "pages/rollcall/add",
+    "pages/rollcall/ongoing",
+    "pages/rollcall/call",
+    "pages/rollcall/detail",
+    "pages/mine/profile",
+    "pages/mine/class",
+    "pages/mine/about",
+    "pages/class/add"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "互动小课堂",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fcfcfc",
+    "borderStyle": "white",
+    "selectedColor": "#00bbbd",
+    "list": [{
+      "pagePath": "pages/rollcall/index",
+      "iconPath": "images/rollcall.png",
+      "selectedIconPath": "images/rollcall-active.png",
+      "text": "点名"
+    }, {
+      "pagePath": "pages/mine/profile",
+      "iconPath": "images/me.png",
+      "selectedIconPath": "images/me-active.png",
+      "text": "我的"
+    }]
+  }
+}

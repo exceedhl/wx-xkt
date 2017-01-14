@@ -1,0 +1,17 @@
+<view class="code-area">
+  <view class="description">请将以下4位数字告知学生，然后点击开始计时，学生在给定时间内正确输入4位数字即可成功完成点名</view>
+  <view class="code">
+    <text>2</text><text>5</text><text>1</text><text>2</text><image src="../../images/refresh.png"/>
+  </view>
+</view>
+
+<view class="call-status">32名学生已签到</view>
+
+<view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="showTopTips">开始计时 (20s)</button>
+    <button class="weui-btn" type="default">查看点名详情</button>
+</view>
+
+<view class="weui-btn-area">
+    <button class="weui-btn" type="warn">结束点名</button>
+</view>
