@@ -1,0 +1,12 @@
+<view class="weui-cells__title">为了更好地进行互动，请输入您的真实姓名</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="姓名" />
+        </view>
+    </view>
+</view>
+
+<view class="weui-btn-area">
+    <button class="weui-btn" type="primary" hover-class="button-hover" bindtap="showTopTips">确定</button>
+</view>

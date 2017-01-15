@@ -1,5 +1,27 @@
 <view class="weui-panel">
-    <view class="weui-panel__hd">我的班级列表</view>
+    <view class="weui-panel__hd">我创建的班级</view>
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg">
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd weui-cell_primary">
+                        <view>物流管理基础一班</view>
+                    </view>
+                    <view class="weui-cell__ft btn-small">改名</view>
+                </navigator>
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd weui-cell_primary">
+                        <view>物流管理基础二班</view>
+                    </view>
+                    <view class="weui-cell__ft btn-small">改名</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="weui-panel">
+    <view class="weui-panel__hd">我加入的班级</view>
     <view class="weui-panel__bd">
         <view class="weui-media-box weui-media-box_small-appmsg">
             <view class="weui-cells weui-cells_in-small-appmsg">

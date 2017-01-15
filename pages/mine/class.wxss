@@ -1,0 +1,11 @@
+page {
+  background-color: #efefef;
+}
+
+.btn-small {
+  border:1px solid #00bbbd;
+  font-size:12px;
+  padding:3px 5px;
+  border-radius:5px;
+  color:#00bbbd;
+}
