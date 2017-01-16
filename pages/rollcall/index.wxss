@@ -15,6 +15,9 @@ page {
   background-color: #fff;
   position: relative;
   overflow: hidden;
+}
+
+.rollcall-day {
   display: flex;
   flex-flow: row nowrap;
 }
@@ -53,12 +56,8 @@ page {
 .rollcall-date {
   width: 120rpx;
   font-size: 16px;
-  color: #F6A623;
-  padding: 15rpx 0 0 25rpx;
-}
-
-.today .rollcall-date {
   color: #00bbbd;
+  padding: 15rpx 0 0 25rpx;
 }
 
 .rollcall-list {
@@ -92,12 +91,12 @@ page {
   width: 150rpx;
 }
 
-.rollcall-status .weui-badge {
-  background-color: #F6A623;
+.rollcall-status.ongoing {
+  color: #F6A623;
 }
 
-.today .rollcall-status .weui-badge {
-  background-color: #00bbbd;
+.rollcall-status.todo {
+  color: #00bbbd;
 }
 
 .rollcall-title, .rollcall-add {

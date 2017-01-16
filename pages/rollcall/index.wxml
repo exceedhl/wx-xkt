@@ -1,144 +1,51 @@
 <scroll-view scroll-y="true" class="rollcalls">
-    <text class="rollcall-panel-title">2016年12月</text>
-    <view class="rollcall-panel today">
-        <view class="rollcall-date">
-          <view>15日</view>
-          <view>周五</view>
-        </view>
 
-        <view class="rollcall-list">
-          <navigator url="detail">
-            <view class="rollcall-item">
-              <view class="rollcall-info">
-                <view class="rollcall-title">14:00的点名</view>
-                <view class="rollcall-class">物流管理基础一班</view>
-              </view>
-              <view class="rollcall-status">
-                28 / 40
-              </view>
-            </view>
-          </navigator>
-
-          <navigator url="ongoing">
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">16:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              进行中
-            </view>
-          </view>
-        </navigator>
-
-        </view>
-    </view>
-
-    <text class="rollcall-panel-title">2016年12月</text>
+  <block wx:for="{{rollcalls}}">
+    <text class="rollcall-panel-title">{{item.yearMonth}}</text>
     <view class="rollcall-panel">
-        <view class="rollcall-date">
-          <view>10日</view>
-          <view>周一</view>
-        </view>
-
-        <view class="rollcall-list">
-          <navigator>
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">14:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              28 / 40
-            </view>
-          </view>
-        </navigator>
-
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">16:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              28 / 40
-            </view>
+      <block wx:for="{{item.days}}">
+        <view class="rollcall-day">
+          <view class="rollcall-date">
+            <view>{{item.day}}</view>
+            <view>{{item.weekDay}}</view>
           </view>
 
+          <view class="rollcall-list">
+            <block wx:for="{{item.calls}}" wx:for-item="call">
+              <block wx:if="{{call.status == 'done'}}">
+                <navigator url="detail">
+                  <view class="rollcall-item">
+                    <view class="rollcall-info">
+                      <view class="rollcall-title">{{call.name}}</view>
+                      <view class="rollcall-class">{{call.class}}</view>
+                    </view>
+                    <view class="rollcall-status">
+                      {{call.peopleAttend}} / {{call.peopleAll}}
+                    </view>
+                  </view>
+                </navigator>
+              </block>
+
+              <block wx:else>
+                <navigator url="{{call.status =='ongoing' ? 'call' : 'ongoing'}}">
+                  <view class="rollcall-item">
+                    <view class="rollcall-info">
+                      <view class="rollcall-title">{{call.name}}</view>
+                      <view class="rollcall-class">{{call.class}}</view>
+                    </view>
+                    <view class="rollcall-status {{call.status}}">
+                      {{call.status == 'ongoing' ? '进行中' : '未开始'}}
+                    </view>
+                  </view>
+                </navigator>
+              </block>
+            </block>
+          </view>
         </view>
+      </block>
     </view>
+  </block>
 
-    <text class="rollcall-panel-title">2016年12月</text>
-    <view class="rollcall-panel">
-        <view class="rollcall-date">
-          <view>10日</view>
-          <view>周一</view>
-        </view>
-
-        <view class="rollcall-list">
-          <navigator>
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">14:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              28 / 40
-            </view>
-          </view>
-        </navigator>
-
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">16:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              28 / 40
-            </view>
-          </view>
-
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">16:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              28 / 40
-            </view>
-          </view>
-
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">16:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              28 / 40
-            </view>
-          </view>
-
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">16:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              28 / 40
-            </view>
-          </view>
-
-          <view class="rollcall-item">
-            <view class="rollcall-info">
-              <view class="rollcall-title">16:00的点名</view>
-              <view class="rollcall-class">物流管理基础一班</view>
-            </view>
-            <view class="rollcall-status">
-              28 / 40
-            </view>
-          </view>
-
-        </view>
-    </view>
 </scroll-view>
 
 <navigator url="add" hover-class="navigator-hover">

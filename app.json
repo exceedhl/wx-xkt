@@ -1,11 +1,11 @@
 {
   "pages":[
-    "pages/mine/profile",
     "pages/rollcall/index",
     "pages/rollcall/add",
     "pages/rollcall/ongoing",
     "pages/rollcall/call",
     "pages/rollcall/detail",
+    "pages/mine/profile",
     "pages/mine/class",
     "pages/mine/about",
     "pages/mine/changename",

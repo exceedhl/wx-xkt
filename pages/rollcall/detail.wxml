@@ -1,41 +1,33 @@
-<view class="stat">班上共有40名学生，32人已签到</view>
-<view class="weui-flex">
-  <view class="weui-flex__item student">
-    <image src="{{icon}}"></image>
-    <view class="name">张三</view>
-  </view>
-  <view class="weui-flex__item student">
-    <image src="{{icon}}"></image>
-    <view class="name">张三</view>
-  </view>
-  <view class="weui-flex__item student">
-    <image src="{{icon}}"></image>
-    <view class="name">张三</view>
-  </view>
-  <view class="weui-flex__item student">
-    <image src="{{icon}}"></image>
-    <view class="name">张三</view>
-  </view>
+<view class="stat">班上共有{{call.peopleAll}}名学生，{{call.peopleAttend}}人已签到</view>
+
+<view class="weui-panel">
+    <view class="weui-panel__hd">已到学生</view>
+    <view class="weui-panel__bd">
+      <view class="students">
+        <block wx:for="{{call.people}}">
+          <view class="student" wx:if="{{item.status == 'attend'}}">
+            <image src="{{item.avatar}}"></image>
+            <view class="name">{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
 </view>
-<view class="weui-flex">
-  <view class="weui-flex__item student">
-    <image src="{{icon}}"></image>
-    <view class="name">张三</view>
-  </view>
-  <view class="weui-flex__item student">
-    <image src="{{icon}}"></image>
-    <view class="name">张三</view>
-  </view>
-  <view class="weui-flex__item student">
-    <image src="{{icon}}"></image>
-    <view class="name">张三</view>
-  </view>
-  <view class="weui-flex__item student">
-    <image src="{{icon}}"></image>
-    <view class="name">张三</view>
-  </view>
+
+<view class="weui-panel">
+    <view class="weui-panel__hd">未到学生</view>
+    <view class="weui-panel__bd">
+      <view class="students">
+        <block wx:for="{{call.people}}">
+          <view class="student" wx:if="{{item.status == 'absent'}}">
+            <image src="{{item.avatar}}"></image>
+            <view class="name">{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
 </view>
 
 <view class="weui-btn-area">
-  <button class="weui-btn" type="warn" hover-class="button-hover" >删除点名</button>
+  <button class="weui-btn" type="warn" hover-class="button-hover">删除点名</button>
 </view>
