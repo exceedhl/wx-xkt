@@ -1,25 +1,39 @@
-//index.js
-//获取应用实例
+const http = require('../../js/request.js');
+
 var app = getApp()
 Page({
   data: {
-    radioItems: [
-        {name: '物流管理基础一班', value: '0'},
-        {name: '物流管理基础二班', value: '1', checked: true}
-    ]
   },
-  radioChange: function (e) {
-      console.log('radio发生change事件，携带value值为：', e.detail.value);
 
-      var radioItems = this.data.radioItems;
+  radioChange: function (e) {
+      var radioItems = this.data.classes;
       for (var i = 0, len = radioItems.length; i < len; ++i) {
           radioItems[i].checked = radioItems[i].value == e.detail.value;
       }
 
       this.setData({
-          radioItems: radioItems
+          classes: radioItems
       });
   },
-  onLoad: function () {
+
+  createRollCall: function(e) {
+    http.post("/rollcalls", e.detail.value);
+    wx.navigateBack();
+  },
+
+  onShow: function () {
+    const that = this;
+    http.get('/classes', function(res) {
+      let classes = [];
+      res.data.forEach(c => {
+        classes.push({name: c.name, value: c.id, checked: false});
+      });
+
+      if (classes.length > 0) {
+        classes[0].checked = true;
+      }
+
+      that.setData({classes: classes});
+    });
   }
 })

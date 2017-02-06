@@ -1,0 +1,24 @@
+.barcode {
+  padding: 20rpx;
+  display: flex;
+  background-color: white;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 30rpx;
+}
+
+.barcode .description {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 42rpx;
+}
+
+.barcode image {
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: 30rpx;
+}
+
+.weui-btn-area {
+  margin-top: 0;
+}

@@ -4,10 +4,11 @@ var app = getApp()
 Page({
   data: {
   },
-  onLoad: function () {
+  onLoad: function (option) {
+    this.setData({id: option.id});
   },
   changeName: function(e) {
-    http.put('/changename', e.detail.value, function(res) {
+    http.put('/classes/' + this.data.id, e.detail.value, function(res) {
       wx.navigateBack();
     });
   }

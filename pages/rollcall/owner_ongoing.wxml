@@ -2,10 +2,10 @@
   <text class="description">
     将该小程序页面分享给学生，或者让大家扫描下面的二维码，即可让学生加入该班级点名。
   </text>
-  <image src="../../images/barcode.png"/>
+  <image src="{{barcodeUrl}}"/>
 </view>
 
 <view class="weui-btn-area">
   <navigator url="call"><button class="weui-btn" type="primary" hover-class="button-hover" >开始点名</button></navigator>
-  <button class="weui-btn" type="warn" hover-class="button-hover" >删除点名</button>
+  <button class="weui-btn" type="warn" hover-class="button-hover" bindtap="deleteCall">删除点名</button>
 </view>

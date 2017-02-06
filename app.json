@@ -2,13 +2,15 @@
   "pages":[
     "pages/rollcall/index",
     "pages/rollcall/add",
-    "pages/rollcall/ongoing",
-    "pages/rollcall/call",
+    "pages/rollcall/owner_ongoing",
+    "pages/rollcall/student_ongoing",
+    "pages/rollcall/owner_call",
     "pages/rollcall/detail",
     "pages/mine/profile",
     "pages/mine/class",
     "pages/mine/about",
     "pages/mine/changename",
+    "pages/mine/changeclassname",
     "pages/class/add"
   ],
   "window":{

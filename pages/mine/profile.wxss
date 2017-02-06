@@ -18,7 +18,7 @@ page {
   border-radius: 50%;
 }
 
-.userinfo-nickname {
+.userinfo-name {
   font-size: 16px;
 }
 

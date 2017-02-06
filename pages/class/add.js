@@ -1,9 +1,15 @@
-//index.js
-//获取应用实例
-var app = getApp()
+const http = require('../../js/request.js');
+
+var app = getApp();
 Page({
   data: {
   },
+
   onLoad: function () {
+  },
+
+  createClass: function(e) {
+    http.post("/classes", e.detail.value);
+    wx.navigateBack();
   }
-})
+});

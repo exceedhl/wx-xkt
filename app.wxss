@@ -15,3 +15,9 @@ button[type="warn"] {
 button[type="warn"].button-hover {
   background-color: #CD4632;
 }
+
+button[type="primary"][plain] {
+  color:#00bbbd;
+  border:1px solid #00bbbd;
+  background-color:transparent;
+}

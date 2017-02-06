@@ -1,9 +1,9 @@
-<form bindsubmit="createClass">
-  <view class="weui-cells__title">请输入班级名称</view>
+<form bindsubmit="changeName">
+  <view class="weui-cells__title">请输入新的班级名称</view>
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__bd">
-        <input name="name" class="weui-input" focus="true" placeholder="班级名称" focus="true"/>
+        <input name="name" class="weui-input" placeholder="班级名称" focus="true"/>
       </view>
     </view>
   </view>

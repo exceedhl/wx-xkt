@@ -1,9 +1,16 @@
-//index.js
-//获取应用实例
-var app = getApp()
+const http = require('../../js/request.js');
+
+var app = getApp();
 Page({
   data: {
   },
-  onLoad: function () {
+  onShow: function () {
+    const that = this;
+    http.get('/classes', function(res) {
+      that.setData({createdClasses: res.data});
+    });
+    http.get('/joinedClasses', function(res) {
+      that.setData({joinedClasses: res.data});
+    });
   }
-})
+});
