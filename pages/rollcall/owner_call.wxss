@@ -16,13 +16,18 @@
   margin-top:32rpx;
 }
 
+.code-area .code button {
+  border: 0;
+  display: inline;
+}
+
 .code-area .code image {
   width:48rpx;
   height:48rpx;
-  margin:0 0 5rpx 5rpx;
 }
 
 .code-area .code text {
+  line-height: 3;
   margin: 0 10rpx;
   border: 1px solid #dcdcdc;
   padding: 5rpx 20rpx;

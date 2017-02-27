@@ -1,4 +1,4 @@
-const http = require('../../js/request.js');
+const http = require('../../js/http.js');
 
 var app = getApp();
 Page({

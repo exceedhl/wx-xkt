@@ -5,6 +5,7 @@
     "pages/rollcall/owner_ongoing",
     "pages/rollcall/student_ongoing",
     "pages/rollcall/owner_call",
+    "pages/rollcall/student_call",
     "pages/rollcall/detail",
     "pages/mine/profile",
     "pages/mine/class",

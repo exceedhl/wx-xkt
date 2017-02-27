@@ -4,6 +4,10 @@ button[type="primary"] {
   background-color: #00bbbd;
 }
 
+button[type="primary"][disabled] {
+  background-color: #00bbbd;
+}
+
 button[type="primary"].button-hover {
   background-color: #279FA0;
 }
@@ -20,4 +24,13 @@ button[type="primary"][plain] {
   color:#00bbbd;
   border:1px solid #00bbbd;
   background-color:transparent;
+}
+
+button[plain][disabled] {
+  color:rgba(0, 0, 0, 0);
+  border-color:rgba(0, 0, 0, 0);
+}
+
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+  background-color:#FFF;
 }

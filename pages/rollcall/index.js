@@ -1,4 +1,4 @@
-const http = require('../../js/request.js');
+const http = require('../../js/http.js');
 
 //index.js
 //获取应用实例

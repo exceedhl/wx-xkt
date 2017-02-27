@@ -1,4 +1,5 @@
-const url = 'https://localhost:8443';
+const url = 'http://localhost:3031';
+const wsurl = 'ws://localhost:3031';
 
 const header = {
   'content-type': 'application/json',
@@ -43,7 +44,20 @@ function http_delete(path) {
   });
 }
 
+function connectWebSocket(path) {
+  wx.connectSocket({
+    url: wsurl + path
+  });
+}
+
+function checkSuccessResponse(res) {
+  return new RegExp('^2[0-9]{2}$', 'g').test(res.statusCode.toString())
+}
+
+module.exports.rootURL = url;
+module.exports.checkSuccessResponse = checkSuccessResponse;
 module.exports.get = get;
 module.exports.post = post;
 module.exports.put = put;
 module.exports.delete = http_delete;
+module.exports.connectWebSocket = connectWebSocket;

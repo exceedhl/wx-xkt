@@ -1,17 +1,17 @@
 <view class="code-area">
   <view class="description">请将以下4位数字告知学生，然后点击开始计时，学生在给定时间内正确输入4位数字即可成功完成点名</view>
   <view class="code">
-    <text>2</text><text>5</text><text>1</text><text>2</text><image src="../../images/refresh.png"/>
+    <text>{{codes[0]}}</text><text>{{codes[1]}}</text><text>{{codes[2]}}</text><text>{{codes[3]}}</text><button plain="true" bindtap="refreshCode" disabled="{{disableRefreshButton}}"><image src="../../images/refresh.png"/></button>
   </view>
 </view>
 
-<view class="call-status">32名学生已签到</view>
+<view class="call-status">{{studentsCalled}}名学生已签到</view>
 
 <view class="weui-btn-area">
-    <button class="weui-btn" type="primary" hover-class="button-hover" bindtap="showTopTips">开始计时 (20s)</button>
+    <button class="weui-btn" type="primary" disabled="{{disableStartTimerButton}}" hover-class="button-hover" bindtap="startTimer">开始计时 ({{seconds}}s)</button>
     <button class="weui-btn" type="default" hover-class="button-hover" >查看点名详情</button>
 </view>
 
 <view class="weui-btn-area">
-    <button class="weui-btn" type="warn" hover-class="button-hover" >结束点名</button>
+    <button class="weui-btn" type="warn" hover-class="button-hover" bindtap="endCall">结束点名</button>
 </view>

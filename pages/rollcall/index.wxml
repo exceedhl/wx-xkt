@@ -1,9 +1,9 @@
 <scroll-view scroll-y="true" class="rollcalls">
 
-  <block wx:for="{{rollcalls}}">
+  <block wx:for="{{rollcalls}}" wx:key="{{yearMonth}}">
     <text class="rollcall-panel-title">{{item.yearMonth}}</text>
     <view class="rollcall-panel">
-      <block wx:for="{{item.days}}">
+      <block wx:for="{{item.days}}" wx:key="{{day}}">
         <view class="rollcall-day">
           <view class="rollcall-date">
             <view>{{item.day}}</view>
@@ -11,7 +11,7 @@
           </view>
 
           <view class="rollcall-list">
-            <block wx:for="{{item.calls}}" wx:for-item="call">
+            <block wx:for="{{item.calls}}" wx:key="{{id}}" wx:for-item="call">
               <block wx:if="{{call.status == 'done'}}">
                 <navigator url="detail?id={{call.id}}">
                   <view class="rollcall-item">

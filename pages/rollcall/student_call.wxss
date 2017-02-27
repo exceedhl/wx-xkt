@@ -1,0 +1,33 @@
+.code-area {
+  margin-bottom: 100rpx;
+}
+
+.code-area .description {
+  font-size:24rpx;
+  margin-top:110rpx;
+  padding:0 30rpx;
+  color: #666;
+  text-align: center;
+}
+
+.code-area .code {
+  display: flex;
+  padding-left: 110rpx;
+  margin-top:32rpx;
+}
+
+.code-area .code input {
+  font-size:120rpx;
+  height: 125rpx;
+  width: 68rpx;
+  margin: 0 10rpx;
+  border: 1px solid #dcdcdc;
+  padding: 15rpx 20rpx 0;
+}
+
+.seconds {
+  font-size:64rpx;
+  color: #888;
+  text-align:center;
+  margin-top:48rpx;
+}

@@ -3,7 +3,7 @@
     <view class="weui-panel__bd">
         <view class="weui-media-box weui-media-box_small-appmsg">
             <view class="weui-cells weui-cells_in-small-appmsg">
-              <block wx:for="{{createdClasses}}">
+              <block wx:for="{{createdClasses}}" wx:key="{{id}}">
                 <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                     <view class="weui-cell__bd weui-cell_primary">
                         <view>{{item.name}}</view>
