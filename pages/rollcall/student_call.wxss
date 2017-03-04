@@ -19,7 +19,7 @@
 .code-area .code input {
   font-size:120rpx;
   height: 125rpx;
-  width: 68rpx;
+  width: 280rpx;
   margin: 0 10rpx;
   border: 1px solid #dcdcdc;
   padding: 15rpx 20rpx 0;
@@ -30,4 +30,11 @@
   color: #888;
   text-align:center;
   margin-top:48rpx;
+}
+
+.submit-code {
+  margin-top: 0;
+  padding-top: 24rpx;
+  margin-left: 0;
+  width: 170rpx;
 }

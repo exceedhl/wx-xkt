@@ -1,5 +1,7 @@
-const url = 'http://localhost:3031';
-const wsurl = 'ws://localhost:3031';
+// const url = 'http://localhost:3031';
+// const wsurl = 'ws://xkt.tronclass.tech';
+const url = 'http://xkt.tronclass.tech';
+const wsurl = 'ws://xkt.tronclass.tech';
 
 const header = {
   'content-type': 'application/json',

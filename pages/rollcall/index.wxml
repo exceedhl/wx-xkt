@@ -1,4 +1,4 @@
-<scroll-view scroll-y="true" class="rollcalls">
+<view class="rollcalls">
 
   <block wx:for="{{rollcalls}}" wx:key="{{yearMonth}}">
     <text class="rollcall-panel-title">{{item.yearMonth}}</text>
@@ -20,7 +20,7 @@
                       <view class="rollcall-class">{{call.class}}</view>
                     </view>
                     <view class="rollcall-status">
-                      {{call.peopleAttend}} / {{call.peopleAll}}
+                      已结束
                     </view>
                   </view>
                 </navigator>
@@ -46,7 +46,7 @@
     </view>
   </block>
 
-</scroll-view>
+</view>
 
 <navigator url="add" hover-class="navigator-hover">
   <view id="rollcall-add">+</view>

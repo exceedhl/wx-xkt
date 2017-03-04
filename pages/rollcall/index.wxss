@@ -119,7 +119,7 @@ page {
 }
 
 #rollcall-add {
-  position: absolute;
+  position: fixed;
   left: 20rpx;
   bottom: 20rpx;
   width: 100rpx;

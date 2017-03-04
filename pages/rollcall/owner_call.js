@@ -54,6 +54,7 @@ Page({
   },
 
   endCall: function() {
+    clearInterval(timer);
     wx.sendSocketMessage({data: JSON.stringify({message: 'EndCall', payload: {rollcallId: this.data.id}})});
     wx.navigateBack();
   },
@@ -69,5 +70,9 @@ Page({
 
   refreshCode: function() {
     this.setCode(Math.floor(1000 + Math.random() * 9000));
+  },
+
+  showDetail: function() {
+    wx.navigateTo({url: 'detail?id=' + this.data.id});
   }
 })

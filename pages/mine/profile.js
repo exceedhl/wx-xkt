@@ -10,5 +10,9 @@ Page({
     http.get('/profile', function(res) {
       that.setData({userInfo: res.data});
     });
+  },
+
+  onHide: function() {
+    console.log('hide profile')
   }
 })
