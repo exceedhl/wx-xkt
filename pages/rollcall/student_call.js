@@ -1,4 +1,5 @@
 const http = require('../../js/http.js');
+const util = require('../../js/util.js');
 
 var app = getApp();
 
@@ -8,14 +9,6 @@ Page({
   data: {
     seconds: null,
     timerStarted: false
-  },
-
-  showToast: function(message) {
-    wx.showToast({
-      title: message,
-      icon: 'success',
-      duration: 1000
-    });
   },
 
   onLoad: function(params) {
@@ -34,7 +27,7 @@ Page({
         case 'TimerStarted':
           if (data.payload.rollcallId == that.data.id) {
             that.setData({timerStarted: true, seconds: data.payload.seconds});
-            that.showToast('计时开始');
+            util.showToast('计时开始');
             timer = setInterval(function() {
               if (that.data.seconds > 0) {
                 that.setData({seconds: that.data.seconds - 1});
@@ -44,18 +37,18 @@ Page({
           break;
         case 'CodeCompare':
           clearInterval(timer);
-          that.showToast('点名成功');
+          util.showToast('点名成功');
           wx.navigateBack();
           break;
         case 'TimeOut':
           if (data.payload.rollcallId == that.data.id) {
-            that.showToast('点名超时');
+            util.showToast('点名超时');
             clearInterval(timer);
           }
           break;
         case 'EndCall':
           if (data.payload.rollcallId == that.data.id) {
-            that.showToast('老师已经结束点名');
+            util.showToast('老师已经结束点名');
             clearInterval(timer);
             wx.navigateBack();
           }
