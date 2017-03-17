@@ -1,0 +1,21 @@
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <view class="userinfo-name">
+    <text>{{userInfo.nickName}}</text>
+  </view>
+</view>
+
+<form bindsubmit="changeName">
+  <view class="weui-cells__title">为了更好地进行互动，请输入您的真实姓名</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd">
+        <input name="name" class="weui-input" placeholder="姓名" focus="true"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" hover-class="button-hover" formType="submit">下一步</button>
+  </view>
+</form>

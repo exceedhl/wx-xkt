@@ -1,19 +1,21 @@
-// const url = 'http://localhost:3031';
-// const wsurl = 'ws://localhost:3031';
-const url = 'https://xkt.tronclass.tech';
-const wsurl = 'wss://xkt.tronclass.tech';
+const url = 'http://localhost:3031';
+const wsurl = 'ws://localhost:3031';
+// const url = 'https://xkt.tronclass.tech';
+// const wsurl = 'wss://xkt.tronclass.tech';
 
-const header = {
-  'content-type': 'application/json',
-  'x-wx-app-id': 'wx-app',
-  'Authorization': 'Bearer ' + wx.getStorageSync('authToken')
-};
+function header() {
+  return {
+    'content-type': 'application/json',
+    'x-wx-app-id': 'wx-app',
+    'Authorization': 'Bearer ' + wx.getStorageSync('authToken')
+  };
+}
 
 function get(path, success) {
   wx.request({
     url: url + path,
     method: 'GET',
-    header: header,
+    header: header(),
     success: success
   });
 }
@@ -22,7 +24,7 @@ function post(path, data, success) {
   wx.request({
     url: url + path,
     method: 'POST',
-    header: header,
+    header: header(),
     data: data,
     success: success
   });
@@ -32,7 +34,7 @@ function put(path, data, success) {
   wx.request({
     url: url + path,
     method: 'PUT',
-    header: header,
+    header: header(),
     data: data,
     success: success
   });
@@ -42,7 +44,7 @@ function http_delete(path) {
   wx.request({
     url: url + path,
     method: 'DELETE',
-    header: header,
+    header: header(),
   });
 }
 
