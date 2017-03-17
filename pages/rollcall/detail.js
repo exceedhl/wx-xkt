@@ -1,7 +1,8 @@
 const http = require('../../js/http.js');
+const BasePage = require('../../js/base_page.js');
 
 var app = getApp();
-Page({
+BasePage({
   data: {
     call: {
       peopleAttend: 22, peopleAll: 40
@@ -10,12 +11,18 @@ Page({
 
   onLoad: function (params) {
     const that = this;
-    http.get('/rollcalls/' + params.id, function(res) {
+    this.setData({id: params.id});
+    http.get('/rollcalls/' + params.id + '/detail', function(res) {
       that.setData({'people': res.data});
     });
 
     http.get('/rollcalls/' + params.id + '/summary', function(res) {
       that.setData({'call': res.data});
     });
+  },
+
+  deleteCall: function() {
+    http.delete('/rollcalls/' + this.data.id);
+    wx.navigateBack();
   }
 })

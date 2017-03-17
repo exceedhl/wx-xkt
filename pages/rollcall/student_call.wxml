@@ -1,10 +1,10 @@
 <form bindsubmit="sendCode">
   <view class="code-area">
     <view class="description">请将从老师那里获得的4位数字在给定时间内输入下列方框</view>
-    <view class="seconds">{{seconds ? seconds + 's' : '计时尚未开始'}}</view>
+    <view class="seconds">{{timerStarted ? seconds + 's' : '计时尚未开始'}}</view>
     <view class="code">
-      <input type="digit" maxlength="4" focus="true" name="code" bindinput="inputCode" disabled="{{!timerStarted}}"/>
-      <button class="weui-btn submit-code" type="primary" hover-class="button-hover" formType="submit" disabled="{{!timerStarted}}">提交</button>
+      <input type="digit" maxlength="4" focus="{{timerStarted}}" name="code" disabled="{{timerStarted ? false : true}}"/>
+      <button class="weui-btn submit-code" type="primary" hover-class="button-hover" formType="submit" disabled="{{timerStarted ? false : true}}">提交</button>
     </view>
   </view>
 </form>

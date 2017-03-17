@@ -15,7 +15,7 @@
 
 .barcode image {
   width: 430rpx;
-  height: 460rpx;
+  height: 485rpx;
   margin-top: 30rpx;
 }
 

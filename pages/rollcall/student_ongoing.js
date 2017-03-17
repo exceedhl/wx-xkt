@@ -1,7 +1,10 @@
 const http = require('../../js/http.js');
+const util = require('../../js/util.js');
+const BasePage = require('../../js/base_page.js');
 
-var app = getApp();
-Page({
+let app = getApp();
+let timer = null;
+BasePage({
   data: {
   },
 
@@ -12,6 +15,20 @@ Page({
       that.setData({barcodeUrl: 'data:image/jpeg;base64,' + res.data});
     });
     http.post('/rollcalls/' + params.id + '/join');
+    timer = setInterval(function() {
+      http.get('/rollcalls/' + params.id, function(res) {
+        if (res.data.status == 'ongoing') {
+          util.showToast('点名已经开始');
+          util.delayExec(() => {
+            wx.redirectTo({url: 'student_call?id=' + params.id});
+          });
+        }
+      });
+    }, 3000);
+  },
+
+  onUnload: function() {
+    clearInterval(timer);
   },
 
   onShareAppMessage: function () {

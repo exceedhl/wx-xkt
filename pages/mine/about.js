@@ -1,7 +1,8 @@
+const BasePage = require('../../js/base_page.js');
 //index.js
 //获取应用实例
 var app = getApp()
-Page({
+BasePage({
   data: {
   },
   onLoad: function () {

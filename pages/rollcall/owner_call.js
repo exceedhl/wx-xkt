@@ -1,11 +1,12 @@
 const http = require('../../js/http.js');
+const BasePage = require('../../js/base_page.js');
 
 var app = getApp();
 
 const seconds = 20;
 let timer = null;
 
-Page({
+BasePage({
   data: {
     disableStartTimerButton: false,
     disableRefreshButton: false,
@@ -16,6 +17,8 @@ Page({
   onLoad: function(params) {
     this.setData({id: params.id});
     this.refreshCode();
+    http.put('/rollcalls/' + params.id, {status: 'ongoing'});
+
     http.connectWebSocket('/call-ws');
 
     wx.onSocketOpen(function(res) {
@@ -56,7 +59,9 @@ Page({
   endCall: function() {
     clearInterval(timer);
     wx.sendSocketMessage({data: JSON.stringify({message: 'EndCall', payload: {rollcallId: this.data.id}})});
-    wx.navigateBack();
+    http.put('/rollcalls/' + this.data.id, {status: 'done'}, function(res) {
+      wx.switchTab({url: 'index'});
+    });
   },
 
   setCode: function(code) {

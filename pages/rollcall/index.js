@@ -1,8 +1,10 @@
 const http = require('../../js/http.js');
+const BasePage = require('../../js/base_page.js');
 
 var app = getApp();
-Page({
+BasePage({
   data: {
+    statuses: {'todo': '未开始', 'ongoing': '进行中', 'done': '已结束'}
   },
 
   fetchRollCalls: function(success) {

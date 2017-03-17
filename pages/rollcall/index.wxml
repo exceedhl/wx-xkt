@@ -19,8 +19,8 @@
                       <view class="rollcall-title">{{call.name}}</view>
                       <view class="rollcall-class">{{call.class}}</view>
                     </view>
-                    <view class="rollcall-status">
-                      已结束
+                    <view class="rollcall-status {{call.status}}">
+                      {{statuses[call.status]}}
                     </view>
                   </view>
                 </navigator>
@@ -34,7 +34,7 @@
                       <view class="rollcall-class">{{call.class}}</view>
                     </view>
                     <view class="rollcall-status {{call.status}}">
-                      {{call.status == 'ongoing' ? '进行中' : '未开始'}}
+                      {{statuses[call.status]}}
                     </view>
                   </view>
                 </navigator>

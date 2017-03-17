@@ -6,4 +6,11 @@ function showToast(message) {
   });
 }
 
+function delayExec(f) {
+  setTimeout(function() {
+    f();
+  },1000);
+}
+
 module.exports.showToast = showToast;
+module.exports.delayExec = delayExec;

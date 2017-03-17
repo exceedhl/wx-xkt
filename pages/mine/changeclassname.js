@@ -1,7 +1,8 @@
 const http = require('../../js/http.js');
+const BasePage = require('../../js/base_page.js');
 
 var app = getApp()
-Page({
+BasePage({
   data: {
   },
   onLoad: function (option) {
