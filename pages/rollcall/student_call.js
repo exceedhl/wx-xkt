@@ -20,6 +20,14 @@ BasePage({
     });
   },
 
+  startInterval: function(page) {
+    return setInterval(function() {
+      if (page.data.seconds > 0) {
+        page.setData({seconds: page.data.seconds - 1});
+      }
+    }, 1000);
+  },
+
   onLoad: function(params) {
     this.setData({id: params.id});
     http.connectWebSocket('/call-ws');
@@ -33,16 +41,18 @@ BasePage({
     wx.onSocketMessage((res) => {
       let data = JSON.parse(res.data);
       switch (data.message) {
+        case 'CurrentState':
+          if (data.payload.incall) {
+            that.setData({timerStarted: true, seconds: data.payload.seconds});
+            timer = that.startInterval(that);
+          }
+          break;
         case 'TimerStarted':
           if (data.payload.rollcallId == that.data.id) {
             that.setData({timerStarted: true, seconds: data.payload.seconds});
             util.showToast('计时开始');
             clearInterval(timer);
-            timer = setInterval(function() {
-              if (that.data.seconds > 0) {
-                that.setData({seconds: that.data.seconds - 1});
-              }
-            }, 1000);
+            timer = that.startInterval(that);
           }
           break;
         case 'CodeCompare':
@@ -69,6 +79,11 @@ BasePage({
         default:
       }
     });
+  },
+
+  onUnload: function() {
+    clearInterval(timer);
+    wx.closeSocket();
   },
 
   sendCode: function(e) {

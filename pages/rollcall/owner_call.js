@@ -14,6 +14,14 @@ BasePage({
     studentsCalled: 0
   },
 
+  startInterval: function(page) {
+    return setInterval(function() {
+      if (page.data.seconds > 0) {
+        page.setData({seconds: page.data.seconds - 1});
+      }
+    }, 1000);
+  },
+
   onLoad: function(params) {
     this.setData({id: params.id});
     this.refreshCode();
@@ -30,6 +38,13 @@ BasePage({
     wx.onSocketMessage(function(res) {
       let data = JSON.parse(res.data);
       switch (data.message) {
+        case 'CurrentState':
+          if (data.payload.incall) {
+            that.setCode(data.payload.code);
+            that.setData({disableStartTimerButton: true, disableRefreshButton: true, seconds: data.payload.seconds, studentsCalled: data.payload.attends});
+            timer = that.startInterval(that);
+          }
+          break;
         case 'TimeOut':
           if (data.payload.rollcallId == that.data.id) {
             clearInterval(timer);
@@ -45,15 +60,16 @@ BasePage({
     });
   },
 
+  onUnload: function() {
+    clearInterval(timer);
+    wx.closeSocket();
+  },
+
   startTimer: function() {
     const that = this;
     wx.sendSocketMessage({data: JSON.stringify({message: 'StartTimer', payload: {rollcallId: this.data.id, code: this.data.code, seconds: seconds}})});
     this.setData({disableStartTimerButton: true, disableRefreshButton: true});
-    timer = setInterval(function() {
-      if (that.data.seconds > 0) {
-        that.setData({seconds: that.data.seconds - 1});
-      }
-    }, 1000);
+    timer = that.startInterval(that);
   },
 
   endCall: function() {
