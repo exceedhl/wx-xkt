@@ -1,6 +1,6 @@
 <view class="weui-article">
   <view class="weui-article__p">
-      微点名是一款基于微信小程序的免费点名应用，希望能够帮助老师们更轻松地完成点名工作。
+      小点名是一款基于微信小程序的免费点名应用，希望能够帮助老师们更轻松地完成点名工作。
   </view>
   <view class="weui-article__p">
       本程序一直在完善，希望能够听到大家的反馈，不断改进。
@@ -8,5 +8,5 @@
 </view>
 
 <view class="weui-footer weui-footer_fixed-bottom">
-    <view class="weui-footer__text">Copyright © 2017 微点名</view>
+    <view class="weui-footer__text">Copyright © 2017 小点名</view>
 </view>

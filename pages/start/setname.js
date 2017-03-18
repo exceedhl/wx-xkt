@@ -6,7 +6,7 @@ BasePage({
   data: {
   },
 
-  onLoad: function () {
+  onLoad: function() {
     const that = this;
     wx.getStorage({
       key: 'authToken',

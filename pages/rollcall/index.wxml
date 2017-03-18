@@ -13,7 +13,7 @@
           <view class="rollcall-list">
             <block wx:for="{{item.calls}}" wx:key="{{id}}" wx:for-item="call">
               <block wx:if="{{call.status == 'done'}}">
-                <navigator url="detail?id={{call.id}}">
+                <navigator url="{{call.role}}_detail?id={{call.id}}">
                   <view class="rollcall-item">
                     <view class="rollcall-info">
                       <view class="rollcall-title">{{call.name}}</view>
