@@ -8,23 +8,33 @@ BasePage({
   data: {
   },
 
+  checkCallStatus: function(id, callback) {
+    http.get('/rollcalls/' + id, function(res) {
+      if (callback) callback(res.data);
+      if (res.data.status == 'ongoing') {
+        util.showToast('点名已经开始');
+        util.delayExec(() => {
+          wx.redirectTo({url: 'student_call?id=' + id});
+        });
+      }
+
+      if (res.data.status == 'done') {
+        wx.switchTab({url: 'index'});
+      }
+    });
+  },
+
   onLoad: function (params) {
     const that = this;
     this.setData({'id': params.id});
+    this.checkCallStatus(params.id, (data) => {
+      this.setData({callName: data.name, className: data.Class.name});
+    });
     http.get('/rollcalls/' + params.id + '/barcode', function(res) {
       that.setData({barcodeUrl: 'data:image/jpeg;base64,' + res.data});
     });
     http.post('/rollcalls/' + params.id + '/join');
-    timer = setInterval(function() {
-      http.get('/rollcalls/' + params.id, function(res) {
-        if (res.data.status == 'ongoing') {
-          util.showToast('点名已经开始');
-          util.delayExec(() => {
-            wx.redirectTo({url: 'student_call?id=' + params.id});
-          });
-        }
-      });
-    }, 3000);
+    timer = setInterval(() => {that.checkCallStatus(params.id)}, 5000);
   },
 
   onUnload: function() {

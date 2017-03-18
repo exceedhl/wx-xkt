@@ -9,6 +9,9 @@ BasePage({
   onLoad: function (params) {
     const that = this;
     this.setData({'id': params.id});
+    http.get('/rollcalls/' + params.id, (res) => {
+      this.setData({callName: res.data.name, className: res.data.Class.name});
+    });
     http.get('/rollcalls/' + params.id + '/barcode', function(res) {
       that.setData({barcodeUrl: 'data:image/jpeg;base64,' + res.data});
     });

@@ -1,3 +1,15 @@
+.call-name {
+  margin-top: -110rpx;
+  font-size: 48rpx;
+  color: #00bbbd;
+}
+
+.class-name {
+  margin-top: -48rpx;
+  font-size: 36rpx;
+  color: #00bbbd;
+}
+
 .barcode {
   padding: 20rpx;
   display: flex;

@@ -1,4 +1,10 @@
 <view class="barcode">
+  <text class="call-name">
+    {{callName}}
+  </text>
+  <text class="class-name">
+    {{className}}
+  </text>
   <text class="description">
     点名还未开始，你可以将该小程序页面分享给大家，或者让大家扫描下面的二维码，让同班学生加入班级点名。
   </text>

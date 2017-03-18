@@ -1,7 +1,7 @@
-const url = 'http://localhost:3031';
-const wsurl = 'ws://localhost:3031';
-// const url = 'https://xkt.tronclass.tech';
-// const wsurl = 'wss://xkt.tronclass.tech';
+// const url = 'http://localhost:3031';
+// const wsurl = 'ws://localhost:3031';
+const url = 'https://xkt.tronclass.tech';
+const wsurl = 'wss://xkt.tronclass.tech';
 
 function header() {
   return {
