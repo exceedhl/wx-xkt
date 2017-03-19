@@ -16,9 +16,24 @@
                     </view>
                     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                 </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="weui-panel">
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg">
                 <navigator url="about" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                     <view class="weui-cell__bd weui-cell_primary">
                         <view>关于小点名</view>
+                    </view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </navigator>
+                <navigator url='../chat/chat?site=140995&oid=&nickname={{userInfo.name}}&photo={{userInfo.avatarUrl}}&magic=&human=1' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd weui-cell_primary">
+                        <view>联系客服</view>
                     </view>
                     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                 </navigator>

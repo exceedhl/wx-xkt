@@ -14,7 +14,8 @@
     "pages/mine/about",
     "pages/mine/changename",
     "pages/mine/changeclassname",
-    "pages/class/add"
+    "pages/class/add",
+    "pages/chat/chat"
   ],
   "window":{
     "backgroundTextStyle":"light",
