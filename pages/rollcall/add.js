@@ -18,8 +18,9 @@ BasePage({
   },
 
   createRollCall: function(e) {
-    http.post("/rollcalls", e.detail.value);
-    wx.navigateBack();
+    http.post("/rollcalls", e.detail.value, function(res) {
+      wx.redirectTo({url: 'owner_ongoing?id=' + res.data.id});
+    });
   },
 
   onShow: function () {

@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/start/landing",
     "pages/start/setname",
     "pages/rollcall/index",
     "pages/rollcall/add",

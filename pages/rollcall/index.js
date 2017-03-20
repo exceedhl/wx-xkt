@@ -1,5 +1,5 @@
-const http = require('../../js/http.js');
-const BasePage = require('../../js/base_page.js');
+const http = require('../../js/http');
+const BasePage = require('../../js/base_page');
 
 var app = getApp();
 BasePage({

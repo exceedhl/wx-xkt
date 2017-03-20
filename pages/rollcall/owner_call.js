@@ -94,6 +94,6 @@ BasePage({
   },
 
   showDetail: function() {
-    wx.navigateTo({url: 'detail?id=' + this.data.id});
+    wx.navigateTo({url: 'owner_detail?id=' + this.data.id});
   }
 })
