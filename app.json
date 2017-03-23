@@ -1,8 +1,7 @@
 {
   "pages":[
-    "pages/start/landing",
-    "pages/start/setname",
     "pages/rollcall/index",
+    "pages/start/setname",
     "pages/rollcall/add",
     "pages/rollcall/owner_ongoing",
     "pages/rollcall/student_ongoing",

@@ -17,7 +17,7 @@ BasePage({
 
   changeName: function(e) {
     http.put('/changename', e.detail.value, function(res) {
-      wx.switchTab({url: '../rollcall/index'});
+      wx.navigateBack();
     });
   }
 });

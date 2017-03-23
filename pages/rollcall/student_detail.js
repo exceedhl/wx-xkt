@@ -4,9 +4,6 @@ const BasePage = require('../../js/base_page.js');
 var app = getApp();
 BasePage({
   data: {
-    call: {
-      peopleAttend: 22, peopleAll: 40
-    }
   },
 
   onLoad: function (params) {

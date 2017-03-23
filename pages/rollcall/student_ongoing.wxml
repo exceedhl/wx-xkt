@@ -10,7 +10,3 @@
   </text>
   <image src="{{barcodeUrl}}"/>
 </view>
-
-<view class="weui-btn-area">
-    <navigator url='index' open-type="switchTab"><button class="weui-btn" type="primary" hover-class="button-hover">回到点名列表</button></navigator>
-</view>

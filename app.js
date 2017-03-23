@@ -6,13 +6,11 @@ App({
       key: 'authToken',
       success: function(res) {
         if (!res.data) {
-          that.login(() => {wx.redirectTo({url: '/pages/start/setname'})});
-        } else {
-          wx.redirectTo({url: '/pages/rollcall/index'});
-        }
+          that.login(() => {wx.navigateTo({url: '/pages/start/setname'})});
+        } 
       },
       fail: function(res) {
-        that.login(() => {wx.redirectTo({url: '/pages/start/setname'})});
+        that.login(() => {wx.navigateTo({url: '/pages/start/setname'})});
       }
     });
   },

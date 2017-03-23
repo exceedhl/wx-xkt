@@ -9,7 +9,6 @@
 
 <view class="weui-btn-area">
     <button class="weui-btn" type="primary" disabled="{{disableStartTimerButton}}" hover-class="button-hover" bindtap="startTimer">开始计时 ({{seconds}}s)</button>
-    <button class="weui-btn" type="default" hover-class="button-hover" bindtap="showDetail">查看点名详情</button>
 </view>
 
 <view class="weui-btn-area">

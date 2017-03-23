@@ -24,17 +24,20 @@ BasePage({
     });
   },
 
-  onLoad: function (params) {
-    const that = this;
+  onLoad: function(params) {
     this.setData({'id': params.id});
-    this.checkCallStatus(params.id, (data) => {
+  },
+
+  onShow: function () {
+    const that = this;
+    this.checkCallStatus(this.data.id, (data) => {
       this.setData({callName: data.name, className: data.Class.name});
     });
-    http.get('/rollcalls/' + params.id + '/barcode', function(res) {
+    http.get('/rollcalls/' + this.data.id + '/barcode', function(res) {
       that.setData({barcodeUrl: 'data:image/jpeg;base64,' + res.data});
     });
-    http.post('/rollcalls/' + params.id + '/join');
-    timer = setInterval(() => {that.checkCallStatus(params.id)}, 5000);
+    http.post('/rollcalls/' + this.data.id + '/join');
+    timer = setInterval(() => {that.checkCallStatus(that.data.id)}, 5000);
   },
 
   onUnload: function() {
